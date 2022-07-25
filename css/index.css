@@ -1,0 +1,476 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-family: 'Raleway', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+    display: flex;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+h3 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+a {
+    text-decoration: none;
+    font-style: normal;
+    color: unset;
+}
+
+em {
+    font-weight: 700;
+    font-style: normal;
+}
+
+.starRating {
+    color: #d9d9d9;
+    font-size: 10px;
+    letter-spacing: -0.5px;
+}
+
+.checked {  /*Star rating checked color*/
+    color: #0065FC;
+}
+
+figure {
+    padding: 4px;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease;
+}
+
+figcaption {
+    padding: 6px 0px 6px 6px;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*--------------------------------------------------*/
+
+/*      Header        */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    padding: 0 3%;
+}
+
+header #logo img {
+    width: 60%;
+    height: auto;
+    object-position: 20px 0;
+}
+
+/*      Menu navigation       */
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li {
+    padding: 40px 10px 40px;
+    border-top: 3px solid transparent;
+    transition: 0.2s ease;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+nav ul li:hover {
+    border-top: 3px solid #0065FC;
+    color: #0065FC;
+}
+
+nav li a {      /* Zone de click élargie */
+    padding: 20px;
+}
+
+/*      Containeur Main      */
+main {
+    display: flex;
+    flex-flow: wrap;
+    width: 100%;
+    gap: 30px;
+    padding: 0 3% 3%;
+}
+
+/*      Containeur filtres     */
+.filters {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+}
+
+.filters p {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 7px;
+}
+
+.filters form {
+    display: flex;
+    margin-bottom: 24px;
+    height: 48px;
+    align-items: center;
+    width: 100%;
+}
+
+/*      Icon left side search bar     */
+.filters form i {
+    font-size: 18px;
+    width: 48px;
+    height: 100%;
+    padding: 16px 16px 0 18px;
+    background-color: #F2F2F2;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+/*      Search bar input zone     */
+.filters form input {
+    border-top: 1px solid #F2F2F2;
+    border-bottom: 1px solid #F2F2F2;
+    border-left: none;
+    border-right: none;
+    font-size: 18px;
+    font-weight: 700;
+    width: 22%;
+    padding-left: 15px;
+    height: 100%;
+    transition: 0.4s ease;
+}
+
+.filters form input:focus {     /* Couleur de bordure de la zone cliquable */
+    outline-style: unset;
+    box-shadow: inset 0px 2px 8px #d9d9d9;
+}
+
+/*      Bouton barre de recherche      */
+.filters form button {
+    width: 13%;
+    height: 100%;
+    border: #0065FC;
+    background-color: #0065FC;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.filters form button:hover b {
+    text-shadow: 2px 0 4px black;
+}
+
+.filters form button b {
+    font-weight: 600;
+    color: white;
+    font-size: 16px;
+}
+
+.filters button .fa-magnifying-glass {  /* Icone loupe version mobile caché en ver. Desktop */
+    display: none;
+}
+
+/*      Filter block     */
+.navFilter {
+    display: flex;
+    align-items: center;
+    height: max-content;
+    margin-bottom: 22px;
+}
+
+.navFilter h3 {         /* Titre zone contenant les filtre */
+    margin-right: 24px;
+    margin-left: 8px;
+}
+
+.navFilter ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+}
+
+.navFilter ul li {
+    position: relative;
+    height: 42px;
+    width: fit-content;
+    padding: 10px 14px 0 50px;
+    font-size: 16px;
+    font-weight: 700;
+    border: 2px solid #d9d9d9;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 0;    /* Permet aux icônes de rester pardessus avant le hover */
+}
+
+.navFilter li i {       /* Icônes filtres */
+    position: absolute;
+    font-size: 16px;
+    width: 42px;
+    height: 42px;
+    padding: 13px;
+    border-radius: 50px;
+    left: -2px;
+    top: -2px;
+    color: #0065FC;
+    background-color: #DEEBFF;
+    transition: 0.3s ease;
+    z-index: -1; /* Couplé au "z-index: 0", le fond de l'icône passe sous le texte */
+}
+
+.navFilter li:hover i {
+    width: 102.5%; /*Rajout de 2.5% pour combler le retrait de l'îcone (left: -2px) */
+}
+
+/*      Filter info message     */
+.filters #navInfo {
+    display: flex;
+    align-items: center;
+}
+
+.filters #navInfo p {
+    margin: 0;
+}
+
+.filters #navInfo .fa-info {        /* Icone message info */
+    height: 22px;
+    width: 22px;
+    text-align: center;
+    padding-top: 3px;
+    margin-right: 10px;
+    color: #0065FC;
+    font-size: 12px;
+    border: 1.5px solid #d9d9d9;
+    border-radius: 20px;
+}
+
+/*      Section Hebergement      */
+
+.accomodation {     /* Containeur primaire */
+    flex: 4;
+    order: 1;
+    width: 65%;
+    padding: 3% 3% 2%;
+    background-color: #F2F2F2;
+    border-radius: 16px;
+}
+
+.containerCardsAccomodation {       /* Containeur secondaire flexbox */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.containerCardsAccomodation .card {     /* Cartes */
+    width: 31%;
+    height: 160px;
+    padding-bottom: 70px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0px 3px 10px #d9d9d9;
+}
+
+.containerCardsAccomodation .card img {     /* Image des cartes */
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+.accomodation a:hover > figure img {        /* Animation survol cartes */
+    opacity: 0.8;
+}
+
+.containerCardsAccomodation h3 {        /* Elément "afficher plus" */
+    margin-top: 4%;
+    cursor: pointer;
+}
+
+.containerCardsAccomodation h3:hover {      /* Animation de survol "afficher plus" */
+    color: #0065FC;
+}
+
+/*      Right side block      */
+
+.popular {
+    display: flex;
+    flex: 2;
+    order: 2;
+    flex-direction: column;
+    width: 35%;
+    padding: 3%;
+    background-color: #F2F2F2;
+    border-radius: 16px;
+}
+
+.containerCardsPopular {
+    display: flex;
+    flex-flow: column;
+    gap: 15px;
+}
+
+.containerCardsPopular .card {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    padding-right: 60%;
+    background-color: white;
+    box-shadow: 0px 3px 10px #d9d9d9;
+    border-radius: 16px;
+}
+
+.containerCardsPopular .card img {
+    border-top-left-radius: 14px;
+    border-bottom-left-radius: 14px;
+}
+
+.containerCardsPopular figcaption {         /* Description carte disposition horizontal */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px;
+    width: 60%;
+    line-height: 20px;
+}
+
+.containerCardsPopular figcaption .starRating {     /* Notation carte horizontal */
+    position: absolute;
+    bottom: 6px;
+}
+
+.popular a:hover > figure img {
+    opacity: 0.8;
+}
+
+/*      Containeur activités        */
+
+.activity {
+    order: 3;
+    height: 35vh;
+    width: 100%;
+    margin-bottom: 54px;
+}
+
+.activity .containerCardsActivity {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.activity .containerCardsActivity .card {
+    line-height: 0;
+    width: 23%;
+    border-radius: 14px;
+    padding: 0 0 40px 0;
+    box-shadow: 0px 3px 10px #d9d9d9;
+    overflow: hidden;
+}
+
+.activity .containerCardsActivity figure {
+    padding: 0;
+    transition: 0.3s ease-out;
+}
+
+.activity .containerCardsActivity .card1, .card4 {      /* Ajustement des tailles de cartes */
+    height: 100%;
+}
+
+.activity .containerCardsActivity .card2 {
+    height: 52%;
+}
+
+.activity .containerCardsActivity .card3 {
+    height: 38%;
+}
+
+.activity .containerCardsActivity .card5, .card6 {
+    height: 45%;
+}
+
+.activity .card img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;    /* Permet l'effet de vignettage uniquement sur l'image */
+}
+
+.activity .card:hover figure {           /* Effet vignettage au survol de carte */
+    box-shadow: inset 0 15px 50px rgba(0, 0, 0, 0.114);
+}
+
+.activity figcaption {
+    padding: 10px 0 10px 15px;
+}
+
+/*      Footer      */
+footer {
+    display: flex;
+    gap: 16%;
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 52px;
+    line-height: 20px;
+}
+
+footer ul li:nth-child(1){      /* Titre de chaque liste */
+    font-weight: 700;
+    line-height: 32px;
+    font-size: 14px;
+}
+
+footer ul li {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+footer ul a:hover {
+    color: #0065FC;
+}
+
+
+

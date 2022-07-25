@@ -1,0 +1,419 @@
+@media screen and (max-width : 991px) and (min-width: 768px){
+    
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    /*  Containeur Main */
+    main {
+        flex-direction:column;
+        height: auto;
+        gap: 20px;
+    }
+
+    /*      Containeur filtres     */
+    .filters {
+        height: max-content;
+    }
+
+    .filters form {
+        margin-bottom: 32px;
+        height: 46px;
+    }
+
+    /*      Icone loupe barre de recherche     */
+    .filters form i {
+        font-size: 18px;
+        width: 46px;
+        padding: 14px;
+    }
+
+    /*      Search bar input zone     */
+    .filters form input {
+        width: 40%;
+    }
+
+    /*      Button right side search bar     */
+    .filters form button {
+        width: 16%;
+    }
+
+    .filters form button b {
+        font-weight: 600;
+        color: white;
+        font-size: 18px;
+    }
+
+    .navFilter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navFilter h3 {
+        margin: 0 0 20px 0;
+    }
+
+    /*  Containeur Hébergement */
+
+    .accomodation {
+        width: 100%;
+        padding: 5%;
+        order: 2;
+    }
+
+    .accomodation .card {
+        width: 31%;
+    }
+
+    .popular {
+        width: 100%;
+        padding: 5%;
+        order: 1;
+    }
+
+    .popular .card {
+        height: 150px;
+    }
+
+    /*       Containeur Activités        */
+    .activity {
+        order: 3;
+    }
+
+    .activity .containerCardsActivity .card {
+        padding-bottom: 40px;
+    }
+
+    .activity .card4 figcaption {
+        padding: 5px 15px 10px 15px;
+        line-height: normal;
+    }
+}
+
+@media screen and (max-width: 767px) { /* For mobile end at 767px width */
+    html::-webkit-scrollbar {
+        display: none;
+    }
+
+    html {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    section, aside {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .starRating {
+        font-size: 12px;
+    }
+
+    figure {
+        border-radius: 20px;
+    }
+
+    figcaption {
+        font-size: 16px;
+        line-height: normal;
+        padding: 10px 0px 10px 10px;
+    }
+
+    /*      Header        */
+    header {
+        flex-direction: column;
+        height: fit-content;
+        width: 100%;
+        padding: 0;
+    }
+
+    header #logo {      /* Logo aligner au centre */
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    header #logo img {
+        width: 100px;
+        margin: 20px 0 20px 0;
+    }
+
+    /*       Onglets navigation        */
+
+    nav {   /* Containeur nav étirer sur toute la largeur */
+        width: 100%;
+    }
+
+    nav ul {    /* Onglets espacés automatique */
+        justify-content: space-evenly;
+        text-align: center;
+    }
+
+    nav ul li {
+        width: 100%;    /* bordure inférieure sur toute la largeur */
+        padding: 15px;
+        border-top: none;
+        border-bottom: 3px solid #F2F2F2;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    nav li a {
+        padding: 15px;
+    }
+
+    nav ul li:hover {
+        border-top: none;
+        border-bottom: 3px solid #0065FC;
+        color: #0065FC;
+    }
+    
+    /*      Containeur Main       */
+    main {
+        width: 100%;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    /*      Containeur filtres     */
+    .filters {
+        height: auto;
+        flex-wrap: wrap;
+        column-gap: 20px;
+    }
+
+    .filters h1,p {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .filters form {
+        height: 48px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        position: relative;
+    }
+
+    .filters form input {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .filters form i.fa-location-dot {
+        width: 48px;
+        font-size: 18px;
+        padding: 15px 15px 15px 16px;
+        border-top-left-radius: 30%;
+        border-bottom-left-radius: 30%;
+    }
+
+    .filters form button b {
+        visibility: hidden;
+    }
+
+    .filters form button {
+        width: 48px;
+        height: 48px;
+        position: absolute;
+        right: 0;
+        border-radius: 30%;
+        background-color: #0065FC;
+    }
+
+    .filters form button .fa-magnifying-glass {
+        display: flex;
+        position: absolute;
+        top: 1px;
+        right: 4px;
+        width: 46px;
+        background-color: transparent;
+        color: white;
+        font-size: 16px;
+    }
+
+    .navFilter {
+        flex-direction: column;
+    }
+
+    .navFilter h3 {
+        margin-bottom: 12px;
+        text-align: left;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .navFilter ul {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .navFilter ul li {
+        position: relative;
+        height: 42px;
+        padding: 10px 12px 0 48px;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .navFilter ul li i {
+        font-size: 16px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .navFilter li:nth-child(1) i {
+        padding: 14px 12px;
+    }
+    .navFilter li:nth-child(2) i {
+        padding: 13px 15px;
+    }
+    .navFilter li:nth-child(3) i {
+        padding: 14px 13px;
+    }
+    .navFilter li:nth-child(4) i {
+        padding: 13px 13px;
+    }
+
+    /*      Filter info message     */
+    .filters #navInfo {
+        align-items: flex-start;
+    }
+
+    .filters #navInfo p {
+        font-size: 16px;
+    }
+
+    .filters #navInfo .circle-info {
+        width: 30px;
+        height: 28px;
+        border: 1.6px solid #d9d9d9;
+    }
+
+    /*      Accomodations block      */
+    .accomodation {
+        background-color: transparent;
+        width: 100%;
+        padding: 40px 20px 40px 20px;
+        order: 2;
+    }
+
+    .accomodation .containerCardsAccomodation {
+        gap: 12px;
+    }
+
+    .accomodation .containerCardsAccomodation .card {
+        width: 100%;
+        height: 210px;
+        padding-bottom: 80px;
+        border-radius: 20px;
+    }
+
+    .accomodation .containerCardsAccomodation .card img {
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+    }
+
+    .accomodation .containerCardsAccomodation h3 {
+        margin-top: 10%;
+    }
+
+    /*      Right side block      */
+    .popular {
+        border-radius: 0;
+        width: 100%;
+        padding: 40px 20px 40px 20px;
+        order: 1;
+    }
+
+    .containerCardsPopular {
+        gap: 12px;
+    }
+
+    .popular .containerCardsPopular .card {
+        height: 150px;
+        border-radius: 20px;
+    }
+
+    .popular .containerCardsPopular .card img {
+        border-top-left-radius: 16px;
+        border-bottom-left-radius: 16px;
+    }
+
+    /*      Activity block        */
+    .activity {
+        height: auto;
+        padding: 20px;
+        order: 3;
+    }
+
+    .activity .containerCardsActivity {
+        gap: 20px;
+    }
+
+    .activity .containerCardsActivity .card {
+        border-radius: 20px;
+        width: 100%;
+        height: 190px;
+    }
+
+    .activity .containerCardsActivity figure {
+        padding-bottom: 16px;
+    }
+
+    .activity .containerCardsActivity figcaption {
+        padding: 14px 0 0 14px;
+    }
+
+    .activity .containerCardsActivity .card img {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    /* Footer */
+    footer {
+        height: auto;
+        gap: 20px;
+        padding: 20px;
+        flex-direction: column;
+    }
+    
+    footer ul li:nth-child(1){
+        line-height: 40px;
+        font-size: 18px;
+    }
+    
+    footer ul li {
+        font-size: 16px;
+        line-height: 30px;
+    }
+}

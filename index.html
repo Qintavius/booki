@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">    <!-- lien vers fichier CSS desktop -->
+    <link rel="stylesheet" href="css/media.css">    <!-- lien vers fichier CSS tablette / mobile -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">     <!-- lien API google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">  <!-- lien de la police Raleway -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/aabe6b2ecf.js" crossorigin="anonymous"></script>   <!-- lien FontAwesome pour intégration icônes -->
+    <title>Booki</title>
+</head>
+<body>
+
+    <header> <!-- Début en-tête -->
+        <div id="logo"><img src="images/logo/Booki.png" alt="Logo Booki"></div>     <!-- Logo Booki -->
+        <nav>
+            <ul> <!-- Onglets navigation en-tête -->
+                <li><a href="#accomodation">Hébergements</a></li>   <!-- a href = Ancrage vers section correspondante -->
+                <li><a href="#activity">Activités</a></li>
+            </ul>
+        </nav>
+    </header> <!-- Fin en-tête -->
+
+    <main> <!-- container principal = section filters / accomodation / popular / activity -->
+
+        <section class="filters">
+
+            <h1>Trouvez votre hébergement pour des vacances de rêve</h1> <!-- Titre principal -->
+                <p>En plein centre ville ou en pleine nature</p>
+
+                <form> <!-- Début barre de recherche -->
+                    <i class="fa-solid fa-location-dot"></i><input type="search" name="town" placeholder="Marseille, France" required id='town'><button type="submit" disabled><b>Rechercher</b><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form> <!-- Fin barre de recherche -->
+
+            <div class="navFilter"> <!-- Début onglets filtres -->
+                <h3>Filtres</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-money-bill-wave"></i>Économique</li>
+                        <li><i class="fa-solid fa-child-reaching"></i>Familial</li>
+                        <li><i class="fa-solid fa-heart"></i>Romantique</li>
+                        <li><i class="fa-solid fa-dog"></i>Animaux autorisés</li>
+                    </ul>
+            </div> <!-- Fin onglets filtres -->
+
+            <div id="navInfo"> <!-- Message info sous filtres -->
+                <i class="fa-solid fa-info"></i><p>Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
+        </section> <!-- Fin container flitre -->
+
+        <section class="accomodation" id="accomodation"> <!-- Début container hebergement -->  <!-- ID pour ancrage onglet navigation -->
+            <h2>Hébergements à Marseille</h2>
+            <div class="containerCardsAccomodation">    <!-- container cartes hébergements -->
+                <a href="#" class="card"> <!-- Carte 1 -->
+                    <figure>
+                        <img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="petite chambre avec lits superposés et deux fenêtres sur rue">
+                        <figcaption>Auberge La Cannebière  <!-- Titre de l'hébergement -->
+                            <p>Nuit à partir de <em>25€</em></p> <!-- Tarif hébergement -->
+                            <div class="starRating"> <!-- Notation hébergement -->
+                                <i class="fa-solid fa-star checked"></i> <!-- Etoile cochée -->
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star"></i>  <!-- Etoile non cochée -->
+                            </div>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="#" class="card"> <!-- Carte 2 -->
+                <figure>
+                        <img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Chambre couleur clair avec deux lits une place et une fenêtre">
+                        <figcaption>Hôtel du port
+                        <p>Nuit à partir de <em>52€</em></p>
+                        <div class="starRating">
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                        </div>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="#" class="card"> <!-- Carte 3 -->
+                    <figure>
+                        <img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Chambre double lit séparés avec placard vêtements et miroir">
+                        <figcaption>Hôtel Les mouettes
+                        <p>Nuit à partir de <em>76€</em></p>
+                        <div class="starRating">
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="#" class="card"> <!-- Carte 4 -->
+                    <figure>
+                        <img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Chambre lumineuse de couleurs blanc et bleu, lit double avec un grand tableau de vagues au dessus de la tête de lit">
+                        <figcaption>Hôtel de la mer
+                        <p>Nuit à partir de <em>46€</em></p>
+                        <div class="starRating">
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="#" class="card"> <!-- Carte 5 -->
+                    <figure>
+                        <img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="chambre d'apparence rustique comprenant 2 lits superposés avec encadrement en bois sombre">
+                        <figcaption>Auberge Le panier
+                        <p>Nuit à partir de <em>23€</em></p>
+                        <div class="starRating">
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="#" class="card"> <!-- Carte 6 -->
+                    <figure>
+                        <img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Vhambre 2 lits simple télévision et un bureau à côte de la fenêtre">
+                        <figcaption>Hôtel chez Amina
+                        <p>Nuit à partir de <em>96€</em></p>
+                        <div class="starRating">
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                        </div>
+                        </figcaption>
+                    </figure>
+                </a>
+            <h3>Afficher plus</h3>
+            </div>  <!-- Fin container cartes -->
+        </section> <!-- Fin section hébergements -->
+
+        <aside class="popular"> <!-- container "populaires" côté droit -->
+            <h2>Les plus populaires<i class="fa-solid fa-star" id="sideStar"></i></h2> <!-- Etoile à droite du titre -->
+            <div class="containerCardsPopular"> <!-- Début container cartes -->
+                <a href="#" class="card">
+                    <figure>
+                        <img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Chambre lit double, mirroir au dessus de la tête de lit et au plafond, lustre et ferronerie cuivrés, grande fenêtre sur rue">
+                        <figcaption>Hôtel le soleil du matin
+                        <p>Nuit à partir de <em>128€</em></p>
+                        <div class="starRating">
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                        </div>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="#" class="card">
+                    <figure>
+                        <img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Chambre lit double couleur beige, banc au pied du lit, store de la fenêtre et rembardes dans la chambres de couleur noir">
+                        <figcaption>Au coeur de l'eau Chambre d'hôtes
+                        <p>Nuit à partir de <em>71€</em></p>
+                        <div class="starRating">
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a href="#" class="card">
+                    <figure>
+                        <img src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Chambre lit double grande tête de lit avec tables de chevet, lampes et prises de courant intégré">
+                        <figcaption>Hôtel Tout bleu et Blanc
+                        <p>Nuit à partir de <em>25€</em></p>
+                        <div class="starRating">
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star checked"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>  <!-- Fin container cartes -->
+        </aside>  <!-- Fin container côté droit -->
+
+        <section class="activity" id="activity"> <!-- Section "activités" --> <!-- ID pour ancrage onglet navigation -->
+            <h2>Activités à Marseille</h2>
+
+            <div class="containerCardsActivity">  <!-- container cartes "activités" -->
+                <a href="#" class="card card1"> <!-- Carte activité 1 -->
+                    <figure>
+                        <img src="images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Vu du vieux port avec de nombreux bateaux amarrés">  <!-- Image carte -->
+                        <figcaption>Vieux Port</figcaption>  <!-- Légende carte -->
+                    </figure>
+                </a>    <!-- Fin carte activité 1 -->
+                <a href="#" class="card card2">
+                    <figure>
+                        <img src="images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort de Pomègues au milieux de roches de couleur clair">
+                        <figcaption>Fort de Pomègues</figcaption>
+                    </figure>
+                </a>
+                <a href="#" class="card card3">
+                    <figure>
+                        <img src="images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Vu depuis un point d'observation avec longue vue au premier plan, digue fortifiée au second plan et îles du Frioul en arrière plan">
+                        <figcaption>Îles du Frioul</figcaption>
+                    </figure>
+                </a>
+                <a href="#" class="card card4">
+                    <figure>
+                        <img src="images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Crique entouré par des falaises et mer méditerranée en arrière plan">
+                        <figcaption>Parc National des Calanques</figcaption>
+                    </figure>
+                </a>
+                <a href="#" class="card card5">
+                    <figure>  
+                        <img src="images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Basilique notre-dame-de-la-garde surplombant la ville de marseille">
+                        <figcaption>Notre-Dame-de-la-Garde</figcaption>
+                    </figure>
+                </a>
+                <a href="#" class="card card6">
+                    <figure>
+                        <img src="images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Fontaines du parc en premier plan entouré par le muséum d'histoire naturelle et le musé des beaux-arts">
+                        <figcaption>Parc Longchamp</figcaption>
+                    </figure>
+                </a>
+            </div> <!-- Fin container cartes -->
+        </section> <!-- Fin section "activités" -->
+    </main>  <!-- Fin container "main" -->
+
+    <footer>  <!-- Pied de page -->
+        <ul>  <!-- liste 1 -->
+            <li>A propos</li>
+            <li><a href="">Fonctionnement du site</a></li>
+            <li><a href="">Conditions générales de vente</a></li>
+            <li><a href="">Données et confidentialité</a></li>
+        </ul> <!-- Fin liste 1 -->
+
+        <ul>  <!-- liste 2 -->
+            <li>Nos hébergements</li>
+            <li><a href="">Charte qualité</a></li>
+            <li><a href="">Soumettre votre hôtel</a></li>
+        </ul> <!-- Fin liste 2 -->
+
+        <ul> <!-- Liste 3 -->
+            <li>Assistance</li>
+            <li><a href="">Centre d'aide</a></li>
+            <li><a href="">Nous contacter</a></li>
+        </ul>  <!-- Fin liste 3 -->
+    </footer>  <!-- Fin pied de page -->
+</body>
+</html>
