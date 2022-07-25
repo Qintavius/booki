@@ -1,5 +1,7 @@
 # booki
 
+<img width="1187" alt="booki-responsive-dark" src="https://user-images.githubusercontent.com/106745831/180771013-695fcf5c-9e3b-44dd-8b79-8a9c216d52eb.png">
+
 ## Contexte
 
 ### Spécifications fonctionnelles :
